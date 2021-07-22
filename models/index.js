@@ -37,6 +37,4 @@ Post.hasMany(Comment, {
     onDelete: 'cascade'
 });
 
-
-
 module.exports = { User, Post, Comment };
