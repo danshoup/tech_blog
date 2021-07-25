@@ -2,9 +2,41 @@ const router = require('express').Router();
 const { User, Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/');
+// router.get('/', async (req, res) => {
+//   try {
+//     const userData = await User.findAll({
+//       attributes: {
+//         exclude: ['password']
+//       }
+//     });
+//     res.status(200).json(userData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
-router.get('/:id');
+router.get('/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id, {
+      attributes: {
+        exclude: ['password']
+      },
+      indlude: [
+        {
+          model: Post,
+          attributes: ['id', 'title', 'content', 'createdAt']
+        }
+      ]
+    });
+    if (!userData) {
+      res.status(404).json({ message: 'There is no user with this id...' });
+      return;
+    }
+    res.status(200).json(userData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 
