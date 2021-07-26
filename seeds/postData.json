@@ -5,13 +5,13 @@
     "user_id": 1
   },
   {
-    "title": "The Ultimate Tech Quiz",
-    "content": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
+    "title": "A Portfolio",
+    "content": "A portfolio is necessary to a successful job search.  Read here to learn how to make your portfolio shine.",
     "user_id": 1
   },
   {
-    "title": "Roll 'Em Up",
-    "content": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
+    "title": "Sip; A Review",
+    "content": "A simple cocktail recipe finder. Simply choose the spirit you have on hand and Sip will show you pictures of many cocktails that can be made using it.",
     "user_id": 3
   }
 ]
