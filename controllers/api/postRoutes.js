@@ -69,7 +69,7 @@ router.put('/:id', async (req, res) => {
         });
         
         if (!postUpdate) {
-            res.status(404).json({ message: 'Ther is no post associated with this id...'});
+            res.status(404).json({ message: 'There is no post associated with this id...'});
             return;
         }
         
@@ -89,7 +89,7 @@ router.delete('/:id', async (req, res) => {
         });
 
         if (!postDelete) {
-            res.status(404).json({ message: 'Ther is no post associated with this id...'});
+            res.status(404).json({ message: 'There is no post associated with this id...'});
             return;
         }
 
