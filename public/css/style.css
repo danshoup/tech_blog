@@ -1,10 +1,21 @@
 :root {
+  /* tech-blog assignment color palette */
   --seaGreen: #d1e6c9;
   --hoverGreen: #63db71;
   --dark: #1a0d0d;
   --gray: #898989;
   --white: #FFFFFF;
+
+  /* preferred color palette */
+  --frost: #F2F1EF;
+  --darkgrey: #B1A6A4;
+  --steelblue: #697184;
+  --frostgrey: #D8CFD0;
+  --dark: #413F3D;  
+
+
 }
+
 
 body {
   font-family: Roboto, sans-serif;
