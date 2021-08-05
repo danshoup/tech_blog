@@ -126,13 +126,21 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
-router.get('/new_post', (req, res) => {
-  // If the user is already logged in, direct to 'new_post'
-  if (req.session.logged_in) {
-    res.redirect('/new_post');
-    return;
-  }
-  res.render('login');
+router.get('/new_post', withAuth, async (req, res) => {
+  // If user is logged in, direct to 'new-post' page
+  try {
+    res.render('new_post', {
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  };
+  // // If the user is already logged in, direct to 'new_post'
+  // if (req.session.logged_in) {
+  //   res.redirect('/new_post');
+  //   return;
+  // }
+  // res.render('login');
 });
 
 router.get('/login', (req, res) => {

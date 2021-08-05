@@ -13,5 +13,11 @@
     "title": "Sip; A Review",
     "content": "A simple cocktail recipe finder. Simply choose the spirit you have on hand and Sip will show you pictures of many cocktails that can be made using it.",
     "user_id": 3
+  },
+  {
+    "title": "A Whole New Blog Post",
+    "content": "We will see if we can see what we can see when we can see it.",
+    "user_id": 11
   }
+
 ]

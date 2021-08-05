@@ -79,6 +79,11 @@ nav {
   border-width: medium;
 }
 
+/* Blog Post card */
+#post-title {
+  font-size: large;
+}
+
 /* Footer */
 
 footer {

@@ -1,10 +1,20 @@
 const router = require('express').Router();
-const { User, Post } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
+      indlude: [
+        {
+          model: Post,
+          attributes: ['id', 'title', 'content', 'createdAt']
+        },
+        {
+          model: Comment,
+          attributes: ['id', 'comment', 'createdAt']
+        }
+      ],
       attributes: {
         exclude: ['password']
       },
@@ -22,6 +32,10 @@ router.get('/:id', async (req, res) => {
         {
           model: Post,
           attributes: ['id', 'title', 'content', 'createdAt']
+        },
+        {
+          model: Comment,
+          attributes: ['id', 'comment', 'createdAt']
         }
       ],
       attributes: { 

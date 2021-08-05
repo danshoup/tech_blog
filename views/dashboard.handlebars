@@ -1,0 +1,13 @@
+{{#each posts as |post|}}
+    {{>dash-posts}}
+{{/each}}
+
+<footer class="footer row justify-content-center">    
+    <a class="btn btn-secondary" href="/new_post" role="button">➕ New Post</a>
+</footer>
+
+<script>
+    dashboard = document.querySelector('#main-title').innerHTML = 'Your Dashboard';
+</script>
+
+<script src="/js/blog-posts.js"></script>
