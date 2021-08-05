@@ -3,7 +3,7 @@
     <h5 class="card-header">Create New Post</h5>
 
     <div class="card-body border-dark">
-        <form class="comment-form" data-post_id="{{id}}">
+        <form class="new-post-form">
 
             <div class="form-group">
                 <label for="new-post-title">Title:</label>
@@ -15,7 +15,7 @@
                 <textarea class="form-control" id="new-post-content" rows="3"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-secondary btn-block" id="add-post">Create</button>
+            <button type="submit" class="btn btn-secondary btn-block" id="add-post">Create Post</button>
         </form>
     </div>
     
@@ -29,3 +29,4 @@
     dashboard = document.querySelector('#main-title').innerHTML = 'Your Dashboard';
 </script>
 
+<script src="/js/create-post.js"></script>

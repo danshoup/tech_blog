@@ -135,12 +135,6 @@ router.get('/new_post', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   };
-  // // If the user is already logged in, direct to 'new_post'
-  // if (req.session.logged_in) {
-  //   res.redirect('/new_post');
-  //   return;
-  // }
-  // res.render('login');
 });
 
 router.get('/login', (req, res) => {

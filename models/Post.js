@@ -30,13 +30,8 @@ Post.init(
                 key: 'id',
                 unique: false,
             }
-        },
+        }
 
-        // date: {
-        //     type: DataTypes.DATE,
-        //     allowNull: false,
-        //     defaultValue: DataTypes.NOW,
-        // }
         
     },
     {
