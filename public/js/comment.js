@@ -2,7 +2,7 @@ const commentFormHandler = async (event) => {
     event.preventDefault();
   
     const comment = document.querySelector('#new-comment').value.trim();
-    const post_id = document.querySelector('data-post_id');
+    const post_id = event.target.getAttribute('data-post-id');
   
     if (comment && post_id) {
       const response = await fetch('/api/comments', {
@@ -12,7 +12,7 @@ const commentFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.reload();
+        document.location.replace(`/post/${post_id}`);
       } else {
         alert(response.statusText);
       }
@@ -20,5 +20,5 @@ const commentFormHandler = async (event) => {
   };
 
   document
-  .querySelector('.comment-form')
+  .querySelector('#comment-form')
   .addEventListener('submit', commentFormHandler);
