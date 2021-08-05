@@ -1,7 +1,7 @@
     <div class="card mx-5 my-3">
-        <a href="/edit_post/{{id}}" data-post_id="{{id}}" class="btn btn-secondary btn-lg btn-block" tabindex="-1" role="button" aria-disabled="true">
-        {{title}}
-        <span class="text-right">{{format_date createdAt}}</span>
+        <a href="/edit_post/{{id}}" data-post_id="{{id}}" class="btn btn-secondary btn-lg btn-block d-flex justify-content-between" tabindex="-1" role="button" aria-disabled="true">
+        <span class="text-left pl-5">{{title}}</span>
+        <span class="text-right pr-5">{{format_date createdAt}}</span>
         </a>
     </div>
 
