@@ -1,10 +1,11 @@
+const post = document.querySelector('.update-form');
+const title = document.querySelector('#update-title').value.trim();
+const content = document.querySelector('#update-content').value.trim();
+const id = post.dataset.post_id;
+
+
 const updatePostHandler = async (event) => {
     event.preventDefault();
-
-    const title = document.querySelector('#update-title').value.trim();
-    const content = document.querySelector('#update-content').value.trim();
-    const post = document.querySelector('.update-form');
-    id = post.dataset.post_id;
 
     if (title && content) {
         const response = await fetch(`/api/posts/${id}`, {
@@ -23,12 +24,8 @@ const updatePostHandler = async (event) => {
 const deletePostHandler = async (event) => {
     event.preventDefault();
 
-    const post = document.querySelector('.update-form');
-    id = post.dataset.post_id;
-
     const response = await fetch(`/api/posts/${id}`, {
         method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' }
     });
 
     if (response.ok) {
