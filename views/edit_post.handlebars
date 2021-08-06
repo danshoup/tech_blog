@@ -3,7 +3,7 @@
     <h5 class="card-header">Edit Post</h5>
 
     <div class="card-body border-dark">
-        <form class="update-form" data-post_id="/edit_post/{{id}}">
+        <form class="update-form" data-post_id="{{id}}">
 
             <div class="form-group">
                 <label for="update-title">Title:</label>
@@ -12,7 +12,7 @@
 
             <div class="form-group">
                 <label for="update-content">Content:</label>
-                <textarea class="form-control" id="update-content" value="{{post_id.content}}" rows="3"></textarea>
+                <textarea class="form-control" id="update-content" value="{{post.content}}" rows="3"></textarea>
             </div>
 
             <button type="button" class="btn btn-secondary btn-block update-post" name="update-post">Update Post</button>
@@ -25,6 +25,6 @@
 </div>
 
 <script>
-    dashboard = document.querySelector('#main-title').innerHTML = 'Your Dashboard';
+    dashboard = document.querySelector('#main-title').innerText = 'Your Dashboard';
 </script>
 <script src="/js/edit-post.js"></script>
