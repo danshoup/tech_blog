@@ -54,7 +54,7 @@ router.post('/', withAuth, async (req, res) => {
             user_id: req.session.user_id,
         });
 
-        req.status(200).json(postData);
+        res.status(200).json(postData);
     }   catch (err) {
         res.status(400).json(err);
     }
@@ -66,8 +66,9 @@ router.put('/:id', withAuth, async (req, res) => {
             where: {
                 id: req.params.id
             },
-        });
         
+        });
+        console.log(postUpdate)
         if (!postUpdate) {
             res.status(404).json({ message: 'There is no post associated with this id...'});
             return;
